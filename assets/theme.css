@@ -183,7 +183,7 @@ textarea {
 .site-header__inner {
   display: grid;
   grid-template-columns: auto 1fr auto;
-  min-height: 136px;
+  min-height: 160px;
   align-items: center;
   gap: 24px;
 }
@@ -193,8 +193,8 @@ textarea {
 }
 
 .site-header__brand img {
-  width: clamp(240px, 24vw, 430px);
-  max-height: 116px;
+  width: clamp(340px, 34vw, 620px);
+  max-height: 138px;
   object-fit: contain;
 }
 
@@ -994,6 +994,32 @@ textarea {
   margin: 14px 0 0;
 }
 
+.not-found-hero {
+  position: relative;
+  min-height: calc(100vh - 160px);
+  display: grid;
+  align-items: center;
+  overflow: hidden;
+}
+
+.not-found-hero__background {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, rgba(38, 21, 12, 0.72), rgba(38, 21, 12, 0.16)),
+    url("alaine-hero-background.png");
+  background-position: center right;
+  background-size: cover;
+  transform: scale(1.01);
+}
+
+.not-found-hero__card {
+  position: relative;
+  z-index: 1;
+  background: rgba(255, 253, 247, 0.86);
+  backdrop-filter: blur(10px);
+}
+
 .custom-order-band h2 {
   margin: 0;
   font-size: clamp(2rem, 4vw, 4.4rem);
@@ -1221,7 +1247,9 @@ textarea {
 }
 
 .site-footer__logo {
-  width: 126px;
+  width: clamp(220px, 18vw, 360px);
+  max-height: 150px;
+  object-fit: contain;
   border-radius: 4px;
 }
 
@@ -1331,12 +1359,12 @@ textarea {
   }
 
   .site-header__brand img {
-    width: 190px;
-    max-height: 84px;
+    width: 260px;
+    max-height: 104px;
   }
 
   .site-header__inner {
-    min-height: 104px;
+    min-height: 120px;
     gap: 10px;
   }
 
