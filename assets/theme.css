@@ -183,7 +183,7 @@ textarea {
 .site-header__inner {
   display: grid;
   grid-template-columns: auto 1fr auto;
-  min-height: 160px;
+  min-height: 190px;
   align-items: center;
   gap: 24px;
 }
@@ -193,8 +193,8 @@ textarea {
 }
 
 .site-header__brand img {
-  width: clamp(340px, 34vw, 620px);
-  max-height: 138px;
+  width: clamp(440px, 42vw, 760px);
+  max-height: 166px;
   object-fit: contain;
 }
 
@@ -1359,12 +1359,12 @@ textarea {
   }
 
   .site-header__brand img {
-    width: 260px;
-    max-height: 104px;
+    width: 320px;
+    max-height: 126px;
   }
 
   .site-header__inner {
-    min-height: 120px;
+    min-height: 142px;
     gap: 10px;
   }
 
