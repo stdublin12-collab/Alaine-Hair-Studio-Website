@@ -8,7 +8,7 @@
         "primary_label": "Start Custom Order",
         "primary_link": "/products/custom-wig-deposit",
         "secondary_label": "Shop Ready Units",
-        "secondary_link": "/collections/all"
+        "secondary_link": "/collections/ready-to-wear-wigs"
       }
     },
     "newsletter_strip": {
@@ -109,7 +109,7 @@
       "settings": {
         "heading": "New Drops",
         "products_to_show": 4,
-        "link": "/collections/all"
+        "link": "/collections/ready-to-wear-wigs"
       }
     },
     "featured_wigs": {
@@ -117,7 +117,7 @@
       "settings": {
         "heading": "Bestsellers",
         "products_to_show": 4,
-        "link": "/collections/all"
+        "link": "/collections/ready-to-wear-wigs"
       }
     },
     "collection_tiles": {
@@ -136,7 +136,7 @@
           "settings": {
             "title": "Ready Units",
             "text": "Shop polished looks ready to wear.",
-            "link": "/collections/all"
+            "link": "/collections/ready-to-wear-wigs"
           }
         },
         "lace_frontals": {
@@ -144,7 +144,7 @@
           "settings": {
             "title": "Lace + Frontals",
             "text": "Finish your install with premium pieces.",
-            "link": "/collections/all"
+            "link": "/collections/lace-frontals"
           }
         },
         "bundles": {
@@ -152,7 +152,7 @@
           "settings": {
             "title": "Bundles",
             "text": "Build the length and fullness you want.",
-            "link": "/collections/all"
+            "link": "/collections/bundles"
           }
         },
         "services": {
@@ -160,7 +160,7 @@
           "settings": {
             "title": "Services",
             "text": "Book installs, styling, and maintenance.",
-            "link": "/pages/services"
+            "link": "/collections/services"
           }
         },
         "shop_all": {
@@ -249,7 +249,7 @@
         "heading": "High standards look good on you",
         "text": "Your hair should be beautiful, secure, and easy to maintain. Start with a custom deposit and let Alaine shape the details.",
         "button_label": "Shop Now",
-        "link": "/collections/all"
+        "link": "/collections/ready-to-wear-wigs"
       }
     },
     "faq_preview": {

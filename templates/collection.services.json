@@ -1,0 +1,17 @@
+{
+  "sections": {
+    "intro": {
+      "type": "alaine-collection-intro",
+      "settings": {
+        "eyebrow": "Book with Alaine",
+        "heading": "Services",
+        "text": "Browse install, maintenance, styling, construction, and reconstruction services."
+      }
+    },
+    "main": {
+      "type": "main-collection-product-grid",
+      "settings": {}
+    }
+  },
+  "order": ["intro", "main"]
+}

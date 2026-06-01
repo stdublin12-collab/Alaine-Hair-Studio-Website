@@ -13,6 +13,8 @@ This is a Dawn-based Shopify Online Store 2.0 theme customized for Alaine Hair S
 5. Assign that product the template `custom-wig-deposit`.
 6. Set the deposit price on that product.
 7. Add ready-to-wear wig products to your main collection.
+8. Create a collection with handle `ready-to-wear-wigs` for ready-to-wear wig products.
+9. Create a collection with handle `services` for service products.
 
 ## Custom Wig Fields
 

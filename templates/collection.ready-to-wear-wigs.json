@@ -1,0 +1,17 @@
+{
+  "sections": {
+    "intro": {
+      "type": "alaine-collection-intro",
+      "settings": {
+        "eyebrow": "Ready units",
+        "heading": "Ready to Wear Wigs",
+        "text": "Shop polished units that are ready for pickup, shipping, or your next install."
+      }
+    },
+    "main": {
+      "type": "main-collection-product-grid",
+      "settings": {}
+    }
+  },
+  "order": ["intro", "main"]
+}
