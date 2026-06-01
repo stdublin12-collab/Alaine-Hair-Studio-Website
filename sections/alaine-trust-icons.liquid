@@ -1,0 +1,55 @@
+<section class="trust-icons">
+  <div class="page-width trust-icons__grid">
+    {% for block in section.blocks %}
+      <div class="trust-item" {{ block.shopify_attributes }}>
+        <span>{{ block.settings.icon }}</span>
+        <strong>{{ block.settings.title }}</strong>
+        <p>{{ block.settings.text }}</p>
+      </div>
+    {% endfor %}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Trust icons",
+  "settings": [],
+  "blocks": [
+    {
+      "type": "item",
+      "name": "Trust item",
+      "settings": [
+        {
+          "type": "text",
+          "id": "icon",
+          "label": "Icon text",
+          "default": "01"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Secure Checkout"
+        },
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Text",
+          "default": "Protected Shopify payment flow."
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Trust icons",
+      "blocks": [
+        { "type": "item", "settings": { "icon": "01", "title": "Secure Checkout", "text": "Protected Shopify payment flow." } },
+        { "type": "item", "settings": { "icon": "02", "title": "Custom Made", "text": "Built around your preferences." } },
+        { "type": "item", "settings": { "icon": "03", "title": "Deposit Required", "text": "Reserve your custom build." } },
+        { "type": "item", "settings": { "icon": "04", "title": "Consultation Included", "text": "Details confirmed before final work." } }
+      ]
+    }
+  ]
+}
+{% endschema %}

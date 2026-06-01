@@ -1,0 +1,75 @@
+<section class="how-it-works section-spacing">
+  <div class="page-width">
+    <div class="section-heading">
+      <h2>{{ section.settings.heading }}</h2>
+      <a href="{{ section.settings.link }}">{{ section.settings.link_label }}</a>
+    </div>
+
+    <div class="how-it-works__grid">
+      {% for block in section.blocks %}
+        <article class="step-card" {{ block.shopify_attributes }}>
+          <span>{{ forloop.index | prepend: '0' }}</span>
+          <h3>{{ block.settings.title }}</h3>
+          <p>{{ block.settings.text }}</p>
+        </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "How it works",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "How Custom Wig Orders Work"
+    },
+    {
+      "type": "text",
+      "id": "link_label",
+      "label": "Link label",
+      "default": "Start order"
+    },
+    {
+      "type": "url",
+      "id": "link",
+      "label": "Link",
+      "default": "/products/custom-wig-deposit"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "step",
+      "name": "Step",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Choose your wig path"
+        },
+        {
+          "type": "textarea",
+          "id": "text",
+          "label": "Text",
+          "default": "Select the type of unit you want and share your lace, length, density, and color preferences."
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "How it works",
+      "blocks": [
+        { "type": "step", "settings": { "title": "Choose your wig path", "text": "Select the type of unit you want and share your lace, length, density, and color preferences." } },
+        { "type": "step", "settings": { "title": "Submit your details", "text": "Send your measurements, inspiration, needed-by date, and any notes for your desired look." } },
+        { "type": "step", "settings": { "title": "Pay your deposit", "text": "Reserve your custom build through Shopify checkout with a secure deposit payment." } },
+        { "type": "step", "settings": { "title": "Confirm your crown", "text": "Alaine reviews the request, confirms final details, and prepares your custom unit." } }
+      ]
+    }
+  ]
+}
+{% endschema %}

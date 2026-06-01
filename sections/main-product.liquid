@@ -1,0 +1,47 @@
+<section class="main-product section-spacing">
+  <div class="main-product__inner page-width">
+    <div class="main-product__media">
+      {% if product.featured_media %}
+        {{ product.featured_media | image_url: width: 1200 | image_tag: loading: 'eager', widths: '500, 800, 1200', sizes: '(min-width: 990px) 50vw, 100vw', alt: product.featured_media.alt | escape }}
+      {% else %}
+        <div class="main-product__placeholder"></div>
+      {% endif %}
+    </div>
+
+    <div class="main-product__info">
+      <p class="main-product__eyebrow">Alaine Hair Studio</p>
+      <h1>{{ product.title }}</h1>
+      <div class="main-product__price">{{ product.selected_or_first_available_variant.price | money }}</div>
+      <div class="main-product__description rte">{{ product.description }}</div>
+
+      {% form 'product', product, class: 'product-form' %}
+        <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
+
+        {% unless product.has_only_default_variant %}
+          <label for="ProductSelect">Style</label>
+          <select id="ProductSelect" name="id">
+            {% for variant in product.variants %}
+              <option value="{{ variant.id }}" {% if variant == product.selected_or_first_available_variant %}selected{% endif %} {% unless variant.available %}disabled{% endunless %}>
+                {{ variant.title }} - {{ variant.price | money }}
+              </option>
+            {% endfor %}
+          </select>
+        {% endunless %}
+
+        <label for="Quantity">Quantity</label>
+        <input id="Quantity" type="number" name="quantity" min="1" value="1">
+
+        <button class="button button--primary product-form__submit" type="submit" {% unless product.selected_or_first_available_variant.available %}disabled{% endunless %}>
+          {% if product.selected_or_first_available_variant.available %}Add to Cart{% else %}Sold Out{% endif %}
+        </button>
+      {% endform %}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Main product",
+  "settings": []
+}
+{% endschema %}

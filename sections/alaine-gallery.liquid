@@ -1,0 +1,75 @@
+<section class="client-gallery section-spacing">
+  <div class="page-width">
+    <div class="section-heading">
+      <h2>{{ section.settings.heading }}</h2>
+      <a href="{{ section.settings.link }}">{{ section.settings.link_label }}</a>
+    </div>
+
+    <div class="client-gallery__grid">
+      {% for block in section.blocks %}
+        <div class="gallery-card gallery-card--{{ forloop.index }}" {{ block.shopify_attributes }}>
+          {% if block.settings.image != blank %}
+            {{ block.settings.image | image_url: width: 900 | image_tag: loading: 'lazy', widths: '400, 700, 900', sizes: '(min-width: 990px) 33vw, 100vw', alt: block.settings.title | escape }}
+          {% endif %}
+          <span>{{ block.settings.title }}</span>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Client gallery",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Alaine Looks"
+    },
+    {
+      "type": "text",
+      "id": "link_label",
+      "label": "Link label",
+      "default": "View gallery"
+    },
+    {
+      "type": "url",
+      "id": "link",
+      "label": "Link",
+      "default": "/pages/gallery"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "image",
+      "name": "Gallery image",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Caption",
+          "default": "Custom unit"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Client gallery",
+      "blocks": [
+        { "type": "image", "settings": { "title": "Custom install" } },
+        { "type": "image", "settings": { "title": "Glueless unit" } },
+        { "type": "image", "settings": { "title": "Soft curls" } },
+        { "type": "image", "settings": { "title": "Lace finish" } }
+      ]
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,57 @@
+<section class="cart section-spacing">
+  <div class="page-width">
+    <h1>Your Cart</h1>
+    {% if cart.item_count > 0 %}
+      <form action="{{ routes.cart_url }}" method="post" novalidate>
+        <div class="cart-items">
+          {% for item in cart.items %}
+            <div class="cart-item">
+              <a class="cart-item__media" href="{{ item.url }}">
+                {% if item.image %}
+                  {{ item.image | image_url: width: 260 | image_tag: loading: 'lazy', alt: item.image.alt | escape }}
+                {% endif %}
+              </a>
+              <div class="cart-item__details">
+                <h2><a href="{{ item.url }}">{{ item.product.title }}</a></h2>
+                <p>{{ item.final_line_price | money }}</p>
+                {% unless item.properties == empty %}
+                  <dl class="cart-item__properties">
+                    {% for property in item.properties %}
+                      {% assign first_character = property.first | slice: 0 %}
+                      {% if property.last != blank and first_character != '_' %}
+                        <div>
+                          <dt>{{ property.first }}</dt>
+                          <dd>{{ property.last }}</dd>
+                        </div>
+                      {% endif %}
+                    {% endfor %}
+                  </dl>
+                {% endunless %}
+                <label for="Updates_{{ item.key }}">Quantity</label>
+                <input id="Updates_{{ item.key }}" type="number" name="updates[]" value="{{ item.quantity }}" min="0">
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+
+        <div class="cart-summary">
+          <p>Subtotal <strong>{{ cart.total_price | money }}</strong></p>
+          <button class="button button--secondary" type="submit" name="update">Update Cart</button>
+          <button class="button button--primary" type="submit" name="checkout">Checkout</button>
+        </div>
+      </form>
+    {% else %}
+      <div class="empty-state">
+        <p>Your cart is currently empty.</p>
+        <a class="button button--primary" href="{{ routes.collections_url }}/all">Shop Wigs</a>
+      </div>
+    {% endif %}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Main cart",
+  "settings": []
+}
+{% endschema %}

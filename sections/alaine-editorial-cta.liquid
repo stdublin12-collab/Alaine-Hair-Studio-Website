@@ -1,0 +1,54 @@
+<section class="editorial-cta section-spacing">
+  <div class="page-width editorial-cta__inner">
+    <div class="editorial-cta__image"></div>
+    <div class="editorial-cta__content">
+      <p>{{ section.settings.eyebrow }}</p>
+      <h2>{{ section.settings.heading }}</h2>
+      <div>{{ section.settings.text }}</div>
+      <a class="button button--primary" href="{{ section.settings.link }}">{{ section.settings.button_label }}</a>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Editorial CTA",
+  "settings": [
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Small text",
+      "default": "Elevate your style"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "High standards look good on you"
+    },
+    {
+      "type": "textarea",
+      "id": "text",
+      "label": "Text",
+      "default": "Your hair should be beautiful, secure, and easy to maintain. Start with a custom deposit and let Alaine shape the details."
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "Button label",
+      "default": "Shop Now"
+    },
+    {
+      "type": "url",
+      "id": "link",
+      "label": "Link",
+      "default": "/collections/all"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Editorial CTA"
+    }
+  ]
+}
+{% endschema %}

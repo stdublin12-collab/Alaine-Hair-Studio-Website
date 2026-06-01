@@ -1,0 +1,75 @@
+<section class="collection-tiles section-spacing">
+  <div class="page-width">
+    <div class="section-heading">
+      <h2>{{ section.settings.heading }}</h2>
+      <a href="{{ routes.collections_url }}">Explore all</a>
+    </div>
+
+    <div class="collection-tiles__grid">
+      {% for block in section.blocks %}
+        <a class="collection-tile" href="{{ block.settings.link }}" {{ block.shopify_attributes }}>
+          <div class="collection-tile__media"></div>
+          <div class="collection-tile__content">
+            <h3>{{ block.settings.title }}</h3>
+            {% if block.settings.text != blank %}
+              <p>{{ block.settings.text }}</p>
+            {% endif %}
+          </div>
+        </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Collection tiles",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Shop by Collection"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "tile",
+      "name": "Tile",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Custom Wigs"
+        },
+        {
+          "type": "textarea",
+          "id": "text",
+          "label": "Text",
+          "default": "Begin your made-for-you unit."
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Link",
+          "default": "/products/custom-wig-deposit"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Collection tiles",
+      "blocks": [
+        { "type": "tile", "settings": { "title": "Custom Wig Deposits", "text": "Begin your made-for-you unit.", "link": "/products/custom-wig-deposit" } },
+        { "type": "tile", "settings": { "title": "Ready Units", "text": "Shop polished looks ready to wear.", "link": "/collections/all" } },
+        { "type": "tile", "settings": { "title": "Lace + Frontals", "text": "Finish your install with premium pieces.", "link": "/collections/all" } },
+        { "type": "tile", "settings": { "title": "Bundles", "text": "Build the length and fullness you want.", "link": "/collections/all" } },
+        { "type": "tile", "settings": { "title": "Services", "text": "Book installs, styling, and maintenance.", "link": "/pages/services" } },
+        { "type": "tile", "settings": { "title": "Shop All", "text": "Browse every Alaine beauty essential.", "link": "/collections/all" } }
+      ]
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,110 @@
+<section class="custom-wig-product section-spacing">
+  <div class="custom-wig-product__inner page-width">
+    <div class="custom-wig-product__intro">
+      <p class="main-product__eyebrow">Custom Wig Deposit</p>
+      <h1>{{ product.title }}</h1>
+      <div class="main-product__price">{{ product.selected_or_first_available_variant.price | money }}</div>
+      <div class="rte">{{ product.description }}</div>
+      <div class="custom-wig-product__process">
+        <span>1. Submit details</span>
+        <span>2. Pay deposit</span>
+        <span>3. Receive confirmation</span>
+      </div>
+    </div>
+
+    <div class="custom-wig-product__form-wrap">
+      {% form 'product', product, class: 'product-form custom-wig-form' %}
+        <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
+        <input type="hidden" name="quantity" value="1">
+
+        <div class="form-grid">
+          <div class="field">
+            <label for="WigType">Wig type</label>
+            <select id="WigType" name="properties[Wig type]" required>
+              <option value="">Select wig type</option>
+              <option>Closure wig</option>
+              <option>Frontal wig</option>
+              <option>Full lace wig</option>
+              <option>Glueless wig</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="LaceType">Lace type</label>
+            <select id="LaceType" name="properties[Lace type]" required>
+              <option value="">Select lace type</option>
+              <option>HD lace</option>
+              <option>Transparent lace</option>
+              <option>Brown lace</option>
+              <option>Not sure</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="Length">Length</label>
+            <select id="Length" name="properties[Length]" required>
+              <option value="">Select length</option>
+              <option>10-14 inches</option>
+              <option>16-20 inches</option>
+              <option>22-26 inches</option>
+              <option>28+ inches</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="Density">Density</label>
+            <select id="Density" name="properties[Density]" required>
+              <option value="">Select density</option>
+              <option>150%</option>
+              <option>180%</option>
+              <option>200%</option>
+              <option>Not sure</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="HairColor">Hair color</label>
+            <input id="HairColor" name="properties[Hair color]" type="text" placeholder="Jet black, honey blonde, highlights..." required>
+          </div>
+
+          <div class="field">
+            <label for="CapSize">Cap size</label>
+            <select id="CapSize" name="properties[Cap size]" required>
+              <option value="">Select cap size</option>
+              <option>Small</option>
+              <option>Medium</option>
+              <option>Large</option>
+              <option>I need help measuring</option>
+            </select>
+          </div>
+
+          <div class="field field--full">
+            <label for="DesiredStyle">Desired style</label>
+            <textarea id="DesiredStyle" name="properties[Desired style]" rows="4" placeholder="Bust down middle part, layered curls, side part bob..." required></textarea>
+          </div>
+
+          <div class="field">
+            <label for="NeededBy">Needed-by date</label>
+            <input id="NeededBy" name="properties[Needed-by date]" type="date">
+          </div>
+
+          <div class="field">
+            <label for="InspirationLink">Notes or inspiration link</label>
+            <input id="InspirationLink" name="properties[Notes/inspiration link]" type="text" placeholder="Paste image link or add notes">
+          </div>
+        </div>
+
+        <button class="button button--primary product-form__submit" type="submit" {% unless product.selected_or_first_available_variant.available %}disabled{% endunless %}>
+          {% if product.selected_or_first_available_variant.available %}Add Deposit to Cart{% else %}Sold Out{% endif %}
+        </button>
+      {% endform %}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Custom wig product",
+  "settings": []
+}
+{% endschema %}

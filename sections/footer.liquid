@@ -1,0 +1,33 @@
+<footer class="site-footer">
+  <div class="site-footer__inner page-width">
+    <div>
+      <img class="site-footer__logo" src="{{ 'alaine-logo-transparent.png' | asset_url }}" alt="{{ shop.name | escape }}" width="160" height="98" loading="lazy">
+      <p>At Alaine Hair Studio, our mission is to create luxury custom wigs and beauty experiences that help every client feel confident, comfortable, and beautifully themselves.</p>
+    </div>
+
+    <div class="site-footer__links">
+      <a href="{{ routes.collections_url }}/all">Shop Wigs</a>
+      <a href="/products/custom-wig-deposit">Custom Order</a>
+      <a href="/pages/faq">FAQ</a>
+      <a href="/policies/shipping-policy">Shipping</a>
+      <a href="/policies/refund-policy">Refunds</a>
+    </div>
+
+    <div class="site-footer__newsletter">
+      <h2>Stay in the chair</h2>
+      {% form 'customer', class: 'newsletter-form' %}
+        <input type="hidden" name="contact[tags]" value="newsletter">
+        <label for="NewsletterEmail" class="visually-hidden">Email</label>
+        <input id="NewsletterEmail" type="email" name="contact[email]" placeholder="Email address" autocorrect="off" autocapitalize="off">
+        <button type="submit">Join</button>
+      {% endform %}
+    </div>
+  </div>
+</footer>
+
+{% schema %}
+{
+  "name": "Footer",
+  "settings": []
+}
+{% endschema %}

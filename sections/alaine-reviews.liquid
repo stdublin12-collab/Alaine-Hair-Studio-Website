@@ -1,0 +1,60 @@
+<section class="reviews section-spacing">
+  <div class="page-width">
+    <div class="section-heading">
+      <h2>{{ section.settings.heading }}</h2>
+    </div>
+
+    <div class="reviews__grid">
+      {% for block in section.blocks %}
+        <article class="review-card" {{ block.shopify_attributes }}>
+          <p>{{ block.settings.quote }}</p>
+          <strong>{{ block.settings.name }}</strong>
+        </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Reviews",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "What Clients Are Saying"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "review",
+      "name": "Review",
+      "settings": [
+        {
+          "type": "textarea",
+          "id": "quote",
+          "label": "Quote",
+          "default": "The unit looked so natural and fit perfectly. I felt confident the second I put it on."
+        },
+        {
+          "type": "text",
+          "id": "name",
+          "label": "Name",
+          "default": "Alaine Client"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Reviews",
+      "blocks": [
+        { "type": "review", "settings": { "quote": "The unit looked so natural and fit perfectly. I felt confident the second I put it on.", "name": "Alaine Client" } },
+        { "type": "review", "settings": { "quote": "My custom wig came out exactly how I imagined. The process felt personal and easy.", "name": "Alaine Client" } },
+        { "type": "review", "settings": { "quote": "The lace, styling, and finish were beautiful. I will definitely order again.", "name": "Alaine Client" } }
+      ]
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,8 @@
+node_modules/
+dist/
+.npm-cache/
+.playwright-browsers/
+.pw-profile/
+.DS_Store
+*.zip
+alaine-hair-studio-shopify-theme/

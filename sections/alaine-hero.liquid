@@ -1,0 +1,105 @@
+{% assign hero_background = 'alaine-hero-background.png' | asset_url %}
+{% if section.settings.background_image != blank %}
+  {% assign hero_background = section.settings.background_image | image_url: width: 2400 %}
+{% endif %}
+
+<section
+  class="alaine-hero alaine-hero--photo"
+  style="--hero-bg-image: url('{{ hero_background }}'); --hero-overlay-opacity: {{ section.settings.overlay_opacity | divided_by: 100.0 }};"
+>
+  <div class="alaine-hero__background" aria-hidden="true"></div>
+  <div class="alaine-hero__inner page-width">
+    <div class="alaine-hero__content">
+      <h1>{{ section.settings.heading }}</h1>
+      <p>{{ section.settings.text }}</p>
+      <div class="alaine-hero__actions">
+        <a class="button button--primary" href="{{ section.settings.primary_link }}">{{ section.settings.primary_label }}</a>
+        <a class="button button--secondary" href="{{ section.settings.secondary_link }}">{{ section.settings.secondary_label }}</a>
+      </div>
+    </div>
+
+    {% unless section.settings.hide_visual_when_photo %}
+      <div class="alaine-hero__visual" aria-label="Luxury custom wig styling preview">
+        <div class="alaine-hero__portrait">
+          <div class="alaine-hero__hair"></div>
+          <div class="alaine-hero__face"></div>
+        </div>
+        <div class="alaine-hero__note">
+          <span>Custom units</span>
+          <strong>Built around your measurements, lace, density, and style goals.</strong>
+        </div>
+      </div>
+    {% endunless %}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Alaine hero",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "background_image",
+      "label": "Background photo",
+      "info": "Optional. If no photo is selected, the theme uses the built-in Alaine hero background asset."
+    },
+    {
+      "type": "range",
+      "id": "overlay_opacity",
+      "min": 0,
+      "max": 80,
+      "step": 5,
+      "unit": "%",
+      "label": "Photo overlay opacity",
+      "default": 30
+    },
+    {
+      "type": "checkbox",
+      "id": "hide_visual_when_photo",
+      "label": "Hide side visual",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Custom Wigs, Made for Your Crown"
+    },
+    {
+      "type": "textarea",
+      "id": "text",
+      "label": "Text",
+      "default": "Order a custom unit shaped around your look, your measurements, and your timeline."
+    },
+    {
+      "type": "text",
+      "id": "primary_label",
+      "label": "Primary button label",
+      "default": "Start Custom Order"
+    },
+    {
+      "type": "url",
+      "id": "primary_link",
+      "label": "Primary button link",
+      "default": "/products/custom-wig-deposit"
+    },
+    {
+      "type": "text",
+      "id": "secondary_label",
+      "label": "Secondary button label",
+      "default": "Shop Ready Units"
+    },
+    {
+      "type": "url",
+      "id": "secondary_link",
+      "label": "Secondary button link",
+      "default": "/collections/all"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Alaine hero"
+    }
+  ]
+}
+{% endschema %}

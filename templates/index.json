@@ -1,0 +1,310 @@
+{
+  "sections": {
+    "hero": {
+      "type": "alaine-hero",
+      "settings": {
+        "heading": "Luxury Custom Wigs and Extensions",
+        "text": "Built for longevity, styled for confidence, and customized around your crown.",
+        "primary_label": "Start Custom Order",
+        "primary_link": "/products/custom-wig-deposit",
+        "secondary_label": "Shop Ready Units",
+        "secondary_link": "/collections/all"
+      }
+    },
+    "newsletter_strip": {
+      "type": "alaine-newsletter-strip",
+      "settings": {
+        "heading": "Because missing your perfect unit would be tragic. Subscribe now."
+      }
+    },
+    "brand_story": {
+      "type": "alaine-brand-story",
+      "settings": {
+        "eyebrow": "Elegance in every detail",
+        "heading": "Wigs you can trust, styled around your life",
+        "text_one": "Every custom unit is planned for durability, comfort, and a polished finish you can wear with confidence.",
+        "text_two": "It is more than hair. It is convenience, confidence, and a look that feels like you."
+      }
+    },
+    "trust_icons": {
+      "type": "alaine-trust-icons",
+      "blocks": {
+        "secure": {
+          "type": "item",
+          "settings": {
+            "icon": "01",
+            "title": "Secure Checkout",
+            "text": "Protected Shopify payment flow."
+          }
+        },
+        "custom": {
+          "type": "item",
+          "settings": {
+            "icon": "02",
+            "title": "Custom Made",
+            "text": "Built around your preferences."
+          }
+        },
+        "deposit": {
+          "type": "item",
+          "settings": {
+            "icon": "03",
+            "title": "Deposit Required",
+            "text": "Reserve your custom build."
+          }
+        },
+        "consultation": {
+          "type": "item",
+          "settings": {
+            "icon": "04",
+            "title": "Consultation Included",
+            "text": "Details confirmed before final work."
+          }
+        }
+      },
+      "block_order": ["secure", "custom", "deposit", "consultation"],
+      "settings": {}
+    },
+    "how_it_works": {
+      "type": "alaine-how-it-works",
+      "blocks": {
+        "step_one": {
+          "type": "step",
+          "settings": {
+            "title": "Choose your wig path",
+            "text": "Select the type of unit you want and share your lace, length, density, and color preferences."
+          }
+        },
+        "step_two": {
+          "type": "step",
+          "settings": {
+            "title": "Submit your details",
+            "text": "Send your measurements, inspiration, needed-by date, and any notes for your desired look."
+          }
+        },
+        "step_three": {
+          "type": "step",
+          "settings": {
+            "title": "Pay your deposit",
+            "text": "Reserve your custom build through Shopify checkout with a secure deposit payment."
+          }
+        },
+        "step_four": {
+          "type": "step",
+          "settings": {
+            "title": "Confirm your crown",
+            "text": "Alaine reviews the request, confirms final details, and prepares your custom unit."
+          }
+        }
+      },
+      "block_order": ["step_one", "step_two", "step_three", "step_four"],
+      "settings": {
+        "heading": "How Custom Wig Orders Work",
+        "link_label": "Start order",
+        "link": "/products/custom-wig-deposit"
+      }
+    },
+    "new_drops": {
+      "type": "featured-wigs",
+      "settings": {
+        "heading": "New Drops",
+        "products_to_show": 4,
+        "link": "/collections/all"
+      }
+    },
+    "featured_wigs": {
+      "type": "featured-wigs",
+      "settings": {
+        "heading": "Bestsellers",
+        "products_to_show": 4,
+        "link": "/collections/all"
+      }
+    },
+    "collection_tiles": {
+      "type": "alaine-collection-tiles",
+      "blocks": {
+        "custom_wigs": {
+          "type": "tile",
+          "settings": {
+            "title": "Custom Wig Deposits",
+            "text": "Begin your made-for-you unit.",
+            "link": "/products/custom-wig-deposit"
+          }
+        },
+        "ready_units": {
+          "type": "tile",
+          "settings": {
+            "title": "Ready Units",
+            "text": "Shop polished looks ready to wear.",
+            "link": "/collections/all"
+          }
+        },
+        "lace_frontals": {
+          "type": "tile",
+          "settings": {
+            "title": "Lace + Frontals",
+            "text": "Finish your install with premium pieces.",
+            "link": "/collections/all"
+          }
+        },
+        "bundles": {
+          "type": "tile",
+          "settings": {
+            "title": "Bundles",
+            "text": "Build the length and fullness you want.",
+            "link": "/collections/all"
+          }
+        },
+        "services": {
+          "type": "tile",
+          "settings": {
+            "title": "Services",
+            "text": "Book installs, styling, and maintenance.",
+            "link": "/pages/services"
+          }
+        },
+        "shop_all": {
+          "type": "tile",
+          "settings": {
+            "title": "Shop All",
+            "text": "Browse every Alaine beauty essential.",
+            "link": "/collections/all"
+          }
+        }
+      },
+      "block_order": ["custom_wigs", "ready_units", "lace_frontals", "bundles", "services", "shop_all"],
+      "settings": {
+        "heading": "Shop by Collection"
+      }
+    },
+    "client_gallery": {
+      "type": "alaine-gallery",
+      "blocks": {
+        "look_one": {
+          "type": "image",
+          "settings": {
+            "title": "Custom install"
+          }
+        },
+        "look_two": {
+          "type": "image",
+          "settings": {
+            "title": "Glueless unit"
+          }
+        },
+        "look_three": {
+          "type": "image",
+          "settings": {
+            "title": "Soft curls"
+          }
+        },
+        "look_four": {
+          "type": "image",
+          "settings": {
+            "title": "Lace finish"
+          }
+        }
+      },
+      "block_order": ["look_one", "look_two", "look_three", "look_four"],
+      "settings": {
+        "heading": "Alaine Looks",
+        "link_label": "View gallery",
+        "link": "/pages/gallery"
+      }
+    },
+    "reviews": {
+      "type": "alaine-reviews",
+      "blocks": {
+        "review_one": {
+          "type": "review",
+          "settings": {
+            "quote": "The unit looked so natural and fit perfectly. I felt confident the second I put it on.",
+            "name": "Alaine Client"
+          }
+        },
+        "review_two": {
+          "type": "review",
+          "settings": {
+            "quote": "My custom wig came out exactly how I imagined. The process felt personal and easy.",
+            "name": "Alaine Client"
+          }
+        },
+        "review_three": {
+          "type": "review",
+          "settings": {
+            "quote": "The lace, styling, and finish were beautiful. I will definitely order again.",
+            "name": "Alaine Client"
+          }
+        }
+      },
+      "block_order": ["review_one", "review_two", "review_three"],
+      "settings": {
+        "heading": "What Clients Are Saying"
+      }
+    },
+    "editorial_cta": {
+      "type": "alaine-editorial-cta",
+      "settings": {
+        "eyebrow": "Elevate your style",
+        "heading": "High standards look good on you",
+        "text": "Your hair should be beautiful, secure, and easy to maintain. Start with a custom deposit and let Alaine shape the details.",
+        "button_label": "Shop Now",
+        "link": "/collections/all"
+      }
+    },
+    "faq_preview": {
+      "type": "alaine-faq-preview",
+      "blocks": {
+        "faq_one": {
+          "type": "faq",
+          "settings": {
+            "question": "How long does a custom wig take?",
+            "answer": "Turnaround depends on the unit and service details. After your deposit, Alaine will confirm timing with you directly."
+          }
+        },
+        "faq_two": {
+          "type": "faq",
+          "settings": {
+            "question": "Is the deposit refundable?",
+            "answer": "Deposit policies should be reviewed before checkout. Custom work begins after order details are confirmed."
+          }
+        },
+        "faq_three": {
+          "type": "faq",
+          "settings": {
+            "question": "What if I do not know my cap size?",
+            "answer": "Choose the measurement help option on the custom order form and Alaine will guide you."
+          }
+        },
+        "faq_four": {
+          "type": "faq",
+          "settings": {
+            "question": "Can I send inspiration photos?",
+            "answer": "Yes. Add an inspiration link or notes when completing the custom wig deposit form."
+          }
+        }
+      },
+      "block_order": ["faq_one", "faq_two", "faq_three", "faq_four"],
+      "settings": {
+        "heading": "Before You Order",
+        "text": "A few quick answers to help you feel clear before placing a custom wig deposit.",
+        "button_label": "Start Custom Order",
+        "link": "/products/custom-wig-deposit"
+      }
+    },
+    "social_strip": {
+      "type": "alaine-social-strip",
+      "settings": {}
+    },
+    "custom_order_band": {
+      "type": "custom-order-band",
+      "settings": {
+        "heading": "Not seeing your exact look?",
+        "text": "Reserve your custom wig build with a deposit and send your style details at checkout.",
+        "button_label": "Start Custom Order",
+        "link": "/products/custom-wig-deposit"
+      }
+    }
+  },
+  "order": ["hero", "newsletter_strip", "brand_story", "trust_icons", "how_it_works", "new_drops", "featured_wigs", "collection_tiles", "client_gallery", "reviews", "editorial_cta", "faq_preview", "social_strip", "custom_order_band"]
+}
