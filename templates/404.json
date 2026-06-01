@@ -1,9 +1,29 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
       "type": "main-404",
       "settings": {}
+    },
+    "alaine_newsletter_strip_inFgKy": {
+      "type": "alaine-newsletter-strip",
+      "custom_css": [],
+      "name": "Newsletter strip",
+      "settings": {
+        "heading": "Your perfect unit could be next. Subscribe to stay in the loop."
+      }
     }
   },
-  "order": ["main"]
+  "order": [
+    "main",
+    "alaine_newsletter_strip_inFgKy"
+  ]
 }
