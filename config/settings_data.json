@@ -10,6 +10,20 @@
 {
   "current": {
     "accent_color": "#6f202a",
+    "sections": {
+      "main-password-header": {
+        "type": "main-password-header",
+        "settings": {
+          "color_scheme": ""
+        }
+      },
+      "main-password-footer": {
+        "type": "main-password-footer",
+        "settings": {
+          "color_scheme": ""
+        }
+      }
+    },
     "content_for_index": [],
     "blocks": {
       "3720565183479497137": {
